@@ -88,11 +88,24 @@ ggplot(comb_fos2, aes(x = Year, y = uso_comb_fos,
   geom_point(shape = 15, size = 2.5) +
   geom_line(size = 1.2) +
   scale_y_continuous(labels = scales::comma) +
-  #scale_x_discrete(labels = c("Alemanha", "Japão", "China", "Estados Unidos")) +
   scale_color_manual(values = c("#88CCEE", "#CC6677",
-                               "#DDCC77", "#117733")) +
+                               "#DDCC77", "#117733"),
+                     labels = c("China", "Alemanha", "Japão", "Estados Unidos")) +
   labs(x = "Tempo (anos)", y = "Consumo de combustíevis\n fósseis (TWh)",
        color = "Países") +
   theme_ipsum(axis_text_size = 14, axis_title_size = 16) +
   theme(axis.text = element_text(color = "black"))
+
+ggplot(comb_fos3, aes(x = Year, y = uso_comb_fos, 
+                      group = Entity, color = Entity)) +
+  geom_line(size = 2) +
+  scale_y_continuous(labels = scales::comma) +
+  scale_color_manual(values = c('#1B9E77', '#999999','#E69F00'),
+                     labels = c("Brasil", "China", "Estados Unidos")) +
+  labs(x = "Tempo (anos)", y = "Consumo de combustíevis\n fósseis (TWh)",
+       color = "Países") +
+  theme_light() +
+  theme(axis.title = element_text(size = 18),
+        axis.text = element_text(color = "black", size = 15),
+        legend.text = element_text(size = 12))
 
