@@ -67,6 +67,8 @@ comb_fos3 <- comb_fos %>%
 
 # Gráficos ---------------------------------------------------------------------------------------------------------------------------------
 
+c4a("safe", 4)
+
 ggplot(comb_fos1, aes(x = fct_reorder(Entity, media), y = media, 
                       fill = Entity)) +
   geom_col(width = 0.9) +
@@ -75,6 +77,22 @@ ggplot(comb_fos1, aes(x = fct_reorder(Entity, media), y = media,
   scale_y_continuous(expand = expansion(mult = c(0,0)),
                      labels = scales::comma) +
   scale_x_discrete(labels = c("Alemanha", "Japão", "China", "Estados Unidos")) +
+  scale_fill_manual(values = c("#88CCEE", "#CC6677",
+                               "#DDCC77", "#117733")) +
   labs(x = "Países", y = "Consumo de combustíevis\n fósseis (TWh)") +
   theme_ipsum(axis_text_size = 14, axis_title_size = 16) +
   theme(legend.position = "none", axis.text = element_text(color = "black"))
+
+ggplot(comb_fos2, aes(x = Year, y = uso_comb_fos, 
+                      group = Entity, color = Entity)) +
+  geom_point(shape = 15, size = 2.5) +
+  geom_line(size = 1.2) +
+  scale_y_continuous(labels = scales::comma) +
+  #scale_x_discrete(labels = c("Alemanha", "Japão", "China", "Estados Unidos")) +
+  scale_color_manual(values = c("#88CCEE", "#CC6677",
+                               "#DDCC77", "#117733")) +
+  labs(x = "Tempo (anos)", y = "Consumo de combustíevis\n fósseis (TWh)",
+       color = "Países") +
+  theme_ipsum(axis_text_size = 14, axis_title_size = 16) +
+  theme(axis.text = element_text(color = "black"))
+
