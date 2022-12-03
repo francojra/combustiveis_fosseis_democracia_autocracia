@@ -38,5 +38,13 @@ library(ggthemes)
 
 # Carregar dados ---------------------------------------------------------------------------------------------------------------------------
 
+comb_fos <- read.csv("fossil-fuel-primary-energy.csv")
+view(comb_fos)
+names(comb_fos)
 
+# Manipular dados --------------------------------------------------------------------------------------------------------------------------
 
+comb_fos <- comb_fos %>%
+  select(-Code) %>%
+  rename(uso_comb_fos = Fossil.fuels..TWh.) %>%
+  view()
