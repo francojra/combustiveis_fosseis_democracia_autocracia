@@ -48,3 +48,23 @@ comb_fos <- comb_fos %>%
   select(-Code) %>%
   rename(uso_comb_fos = Fossil.fuels..TWh.) %>%
   view()
+
+comb_fos1 <- comb_fos %>%
+  filter(Entity %in% c("United States", "Germany", "Japan", "China")) %>%
+  group_by(Entity) %>%
+  summarise(media = mean(uso_comb_fos),
+            n = n(), sd = sd(uso_comb_fos),
+            se = sd/sqrt(n)) %>%
+  view()
+
+comb_fos2 <- comb_fos %>%
+  filter(Entity %in% c("United States", "Germany", "Japan", "China")) %>%
+  view()
+
+comb_fos3 <- comb_fos %>%
+  filter(Entity %in% c("United States", "China", "Brazil")) %>%
+  view()
+
+# Gráficos ---------------------------------------------------------------------------------------------------------------------------------
+
+
