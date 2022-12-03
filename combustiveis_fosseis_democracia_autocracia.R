@@ -12,6 +12,31 @@
 ### Energia a partir de combustíveis fósseis tem sido um fundamental condutor social, econômico
 ### tecnológico e responsável pelo progesso do desenvolvimento que seguiu.
 
-###
+### Combustíveis fósseis (carvão, petróleo e gás) continua a jogar um dominante papel nos
+### sistemas de nergia global.
+
+### Mas eles também vem com negativos impactos. Quando queimam, eles produzem dióxido de carbono,
+### e são os maiores condutores das mudanças climáticas globais. Eles são também os maiores
+### contribuidores da poluição local, que é estimada a estar diretamente ligada a milhões de
+### mortes prematuras a cada ano.
+
+### Fontes de energia de baixa emissão de carbono - nuclear e renováveis - se tornam protamente
+### disponíveis, o mundo necessita rapidamente aderir a transição e abandonar os combustíveis
+### fósseis.
+
+### Esse artigo apresenta as perspectivas recentes e de longo prazo sobre o carvão, petróleo
+### e gás - como muitos países produzem e consomem; onde estão as reservas de nosso combustível
+### fóssil; e quais os papéis que os combustíveis fósseis desempenham em nossos sistemas de
+### energia e eletricidade.
+
+# Carregar pacotes -------------------------------------------------------------------------------------------------------------------------
+
+library(tidyverse)
+library(cols4all)
+library(hrbrthemes)
+library(ggthemes)
+
+# Carregar dados ---------------------------------------------------------------------------------------------------------------------------
+
 
 
